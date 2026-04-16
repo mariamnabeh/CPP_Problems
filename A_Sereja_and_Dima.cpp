@@ -16,21 +16,7 @@ int main() {
     ios::sync_with_stdio(false);
     cin.tie(NULL);
     
-    string  prev, cre;
-    int n;
-    cin >> n>> prev;
-    int count=1;
-    for(int i=1; i<n; i++){
-cin>>cre;
-if(cre!=prev){
-count++;
-
-}
-prev=cre;
-
-
-    }
-
-    cout<<count;
+    
+    
     return 0;
 }
