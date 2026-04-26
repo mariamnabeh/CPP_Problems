@@ -29,7 +29,7 @@ if (a[i+1]%a[i]!=0){
   ll g= gcd(a[i], a[i+1]);
 
     ll x_i = a[i]/g;
-  ll x= lcm(x, x_i);
+ x= lcm(x, x_i);
 }
 
 
@@ -44,8 +44,8 @@ int main()
     ios::sync_with_stdio(false);
     cin.tie(NULL);
 
-    ll t = 1;
-    // cin >> t;
+    ll t ;
+     cin >> t;
     while (t--)
     {
         SOLVE();
