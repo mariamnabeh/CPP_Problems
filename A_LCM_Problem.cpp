@@ -17,7 +17,10 @@ const ll MOD = 1e9 + 7;
 void SOLVE() 
  //                        بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ
 {
-    
+    ll x, y;
+    cin>>x>>y;
+    if (2*x<=y) cout<<x<<" "<<2*x;
+    else cout<<-1<< " "<< -1;
 }
 
 int main()
@@ -25,8 +28,8 @@ int main()
     ios::sync_with_stdio(false);
     cin.tie(NULL);
 
-    ll t = 1;
-    // cin >> t;
+    ll t ;
+     cin >> t;
     while (t--)
     {
         SOLVE();
