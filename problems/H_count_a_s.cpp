@@ -36,7 +36,7 @@ void SOLVE()
     vector<ll> prefix(n + 1, 0);
 
     for (int i = 1; i <= n; i++) {
-        prefix[i] = prefix[i - 1] + (s[i - 1] == 'a');
+       prefix[i]= prefix[i-1]+(s[i-1]=='a');
     }
 while ((q--))
 {

@@ -37,8 +37,8 @@ void SOLVE()
 
     // build prefix
     for (int i = 1; i <= n; i++) {
-        prefix[i] = prefix[i - 1] + (s[i - 1] == 'a'); 
-        // ممكن تغير الشرط حسب المطلوب
+        prefix[i] = prefix[i - 1] + (s[i - 1] == 'a'); // s[i-1]=='a'? if yes +1, else 0
+    
     }
 
     int q;
@@ -62,10 +62,7 @@ int main()
     ios::sync_with_stdio(false);
     cin.tie(NULL);
 
-    ll t = 1;
-    // cin >> t;
-    while (t--)
-    {
+   
         SOLVE();
-    }
+    
 }
