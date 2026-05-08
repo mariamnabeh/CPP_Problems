@@ -35,7 +35,7 @@ void SOLVE()
             divisors.push_back(i); // القاسم الأول
             
        
-            if (i * i != n) {
+            if ((n / i)!= i) {
                 divisors.push_back(n / i);
             }
         }
