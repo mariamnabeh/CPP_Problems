@@ -32,7 +32,7 @@ void SOLVE()
     
     for (long long i = 1; i * i <= n; i++) {
         if (n % i == 0) {
-            divisors.push_back(i); // القاسم الأول
+            divisors.push_back(i); 
             
        
             if ((n / i)!= i) {
