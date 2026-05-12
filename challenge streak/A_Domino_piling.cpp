@@ -27,7 +27,7 @@ void SOLVE()
 {
     // day 1 of challenge : every day atleast one math problem :)
     // draft:
-// as every domino = 2 spuare , and we must fill the area without skip any space or overlap
+// as every domino = 2 spuare , and we must but the domino in the area without overlap and be in the area limit
 // so, answer is : area/2
  
     // بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ
