@@ -20,7 +20,7 @@
 using namespace std;
 using ll = long long;
 
-#define el '\n
+#define el '\n'
 const ll MOD = 1e9 + 7;
 
 void SOLVE()
@@ -28,11 +28,22 @@ void SOLVE()
     // بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ
     // day 3 of challenge : every day atleast one math problem :)
 
+ll k,n,w;
+cin>>k>>n>>w;
+ll amount=0;
+ll current=0;
+for(int i=1; i<=w; i++){
+current+=k*i;
 
+}
 
+amount=current-n;
+if (amount>0){
+cout<<amount;}
+else{
+cout<<0;
 
-
-
+}
 
 
 }
