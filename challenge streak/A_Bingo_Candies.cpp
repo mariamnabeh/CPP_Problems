@@ -16,6 +16,7 @@
 #include <stack>
 #include <set>
 #include <numeric>
+#include <map>
 
 using namespace std;
 using ll = long long;
@@ -27,13 +28,33 @@ void SOLVE()
 {
     // بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ
     
-
-
-
-
-
+  // day 4 of challenge : every day atleast one math problem :)
+ll n;
+cin>>n;
+map<ll,ll> freq;
+for(int i=0; i<n; i++){
+for(int j=0; j<n; j++){
+int x;
+cin>>x;
+freq[x]++;
 
 }
+}
+for(auto[color, cnt]: freq){
+
+if(cnt>n*(n-1)){
+
+    cout<<"NO"<<el;
+    return;
+}
+
+
+
+    
+}
+cout<<"YES"<<el;
+}
+
 
 int main()
 {
