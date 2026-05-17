@@ -6,7 +6,8 @@
  ██║ ╚═╝ ██║██║  ██║██║  ██║██║██║  ██║██║ ╚═╝ ██║    ██║ ╚████║██║  ██║██████╔╝███████╗██║  ██║
  ╚═╝     ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝╚═╝  ╚═╝╚═╝     ╚═╝    ╚═╝  ╚═══╝╚═╝  ╚═╝╚═════╝ ╚══════╝╚═╝  ╚═╝
 */
-
+ // بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ
+      // day 6 of challenge : every day atleast one math problem :)
 #include <iostream>
 #include <algorithm>
 #include <string>
@@ -23,7 +24,7 @@ using ll = long long;
 #define el '\n' 
 const ll MOD = 1e9 + 7;
 // draft:
-// to check the num is prime or not" fast" , we can't use the tradtional way. it will cause TLE
+// to check the num is prime and  the differnce notv" fast" , we can't use the tradtional way. it will cause TLE
 // so, lrt p= prime number
 // p= n*1
 // if we have (x^2)-(y^2) == (x-y)(x+y)
@@ -43,8 +44,7 @@ bool prime(ll n){
 
 void SOLVE()
 {
-    // بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ
-      // day 6 of challenge : every day atleast one math problem :)
+   
 ll x,y;
 cin>>x>>y;
 
