@@ -6,8 +6,7 @@
  ██║ ╚═╝ ██║██║  ██║██║  ██║██║██║  ██║██║ ╚═╝ ██║    ██║ ╚████║██║  ██║██████╔╝███████╗██║  ██║
  ╚═╝     ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝╚═╝  ╚═╝╚═╝     ╚═╝    ╚═╝  ╚═══╝╚═╝  ╚═╝╚═════╝ ╚══════╝╚═╝  ╚═╝
 */
- // بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ
-      // day 6 of challenge : every day atleast one math problem :)
+
 #include <iostream>
 #include <algorithm>
 #include <string>
@@ -17,48 +16,31 @@
 #include <stack>
 #include <set>
 #include <numeric>
-#include<cmath>
 
 using namespace std;
 using ll = long long;
+
 #define el '\n' 
 const ll MOD = 1e9 + 7;
-// day 6  of challenge : every day atleast one math problem :)
-// draft:
-// to check the num is prime and  the differnce note" fast" , we can't use the tradtional way. it will cause TLE
-// so, lrt p= prime number
-// p= n*1
-// if we have (x^2)-(y^2) == (x-y)(x+y)
-// must brackt = 1, and the anther = prime num
-// hance , (x-y) logically can =1 because it's must = smallest value
-// finally , (x-y) must=1&& (x+y) must be prime
-
-bool prime(ll n){
-    if(n < 2) return false;
-
-    for(ll i = 2; i * i <= n; i++){
-        if(n % i == 0)
-            return false;
-    }
-
-    return true;}
 
 void SOLVE()
 {
-   
-ll x,y;
-cin>>x>>y;
+    // بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ
+    ll n, k;
+cin>>n>>k;
+    ll count =0;
+    vector<ll>a(n);
+    for(int i=0; i<n; i++){
+   cin >> a[i];  }
+    for(int i=0; i<n; i++){
+if (a[i]>=a[k-1]&&a[i]>0){
+count++;
+} //cout<<count;
 
-if ((x-y)==1&&prime(x+y)){
-    cout<<"YES"<<el;
+ 
 }
+cout<<count;
 
-else{
-
-cout<<"NO"<<el;
-
-
-}
 }
 
 int main()
@@ -66,8 +48,8 @@ int main()
     ios::sync_with_stdio(false);
     cin.tie(NULL);
 
-    ll t ;
-     cin >> t;
+    ll t = 1;
+    // cin >> t;
     while (t--)
     {
         SOLVE();
