@@ -15,47 +15,55 @@
 #include <deque>
 #include <stack>
 #include <set>
+#include <map>
+#include <cmath>
 #include <numeric>
 
 using namespace std;
 using ll = long long;
 
-#define el '\n'
+#define el '\n' 
 const ll MOD = 1e9 + 7;
 
 void SOLVE()
 {
     // بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ
-    //we have k is num of paper must be black in queue ,print min num of char trun into B to evluate this condtion
-    ll k;
-    cin>>k;
-    string s;
-    cin>>s;
-    ll min=0;
-    bool flage=true;
-    vector<char>prefix;
-    for (auto x:s){
-if (prefix[x]!='B'&&s.length()<=k){
-flage=false;
-min+=1;}
-if (prefix[x]=='B'&&s.length()<=k){
+  ll n;
+  cin>>n;
+  vector<ll>a(n);  
+vector<ll>prefix(n+1,0);
+for(int i=0; i<n; i++){
+cin>>a[i];
+}
+for(int i=1; i<=n; i++){
+prefix[i]=prefix[i-1]+a[i-1];
+}
+vector<pair<ll,ll>>best;
+    for (int i = 1; i <= n; i++) {
+        int target_sum = 0;
+        for (int j = i; j <= n; j++) {
+            target_sum += a[j];}}
 
-min=0;
-}
+
+
+            
 }
 
-cout<<min<<el;
-}
+
+
+
+
 
 int main()
 {
     ios::sync_with_stdio(false);
     cin.tie(NULL);
 
-    ll t ;
-     cin >> t;
+    ll t = 1;
+    // cin >> t;
     while (t--)
     {
         SOLVE();
     }
+    return 0;
 }
