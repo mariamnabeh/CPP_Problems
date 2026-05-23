@@ -25,6 +25,11 @@ const ll MOD = 1e9 + 7;
 
 void SOLVE()
 {
+     ios::sync_with_stdio(false);
+    cin.tie(NULL);
+
+   
+        SOLVE();
     // بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ
 
     string s;
@@ -59,10 +64,8 @@ void SOLVE()
 
 int main()
 {
-    ios::sync_with_stdio(false);
-    cin.tie(NULL);
+    
 
-   
         SOLVE();
     
 }
