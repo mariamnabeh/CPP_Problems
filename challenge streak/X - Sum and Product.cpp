@@ -15,21 +15,26 @@
 #include <deque>
 #include <stack>
 #include <set>
+#include <map>
+#include <cmath>
 #include <numeric>
 
 using namespace std;
 using ll = long long;
 
 #define el '\n' 
-const ll MOD = 2e30;
-const int MAX_VAL = 1000000;
-int divisors[MAX_VAL + 1];
+const ll MOD = 1e9 + 7;
+
 void SOLVE()
 {
     // بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ
-    ll a, b, c;
-    cin>>a>>b>>c;
-  // day 6 of challenge : every day atleast one math problem :)
+    // day 8  of challenge : every day atleast one math problem :)
+ll s, p;
+cin>>s>>p;
+
+
+
+
 
 
 
@@ -47,4 +52,5 @@ int main()
     {
         SOLVE();
     }
+    return 0;
 }
