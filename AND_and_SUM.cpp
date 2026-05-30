@@ -28,17 +28,7 @@ const ll MOD = 1e9 + 7;
 void SOLVE()
 {
     // بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ
-    // day 8  of challenge : every day atleast one math problem :)
-ll s, p;
-cin>>s>>p;
-
-
-
-
-
-
-
-
+    
 }
 
 int main()
