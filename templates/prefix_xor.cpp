@@ -52,7 +52,7 @@ prefix[r]^prefix[l-1];
 
 }
 
-
+// time : O(N+Q)
 
 
 
