@@ -54,7 +54,7 @@ cin>>r>>l;
 for (ll bit = 0; bit< 32; bit++){
 
     int count=prefix[bit][r]-prefix[bit][l-1];
-    if (count =r-l+1) ans+=bit<<1;
+    if (count ==r-l+1) ans+=bit<<1;
    
 }
 }
