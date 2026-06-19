@@ -25,39 +25,45 @@ using ll = long long;
 #define el '\n' 
 const ll MOD = 1e9 + 7;
 
+void SOLVE()
+{
+    // بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ
+     char shift;
+     cin>>shift;
+     string s;
+     cin>>s;
+  string ans="";
+     string key = "qwertyuiopasdfghjkl;zxcvbnm,./";
+for(int i=0 ; i<s.size(); i++){
+char c=s[i];
+int pos=key.find(c);
+     if(shift=='R'){
+char d=key[pos-1];
+ans+=d;
+
+}
+
+     
+if(shift=='L'){
+
+char m=key[pos+1];
+ans+=m;
+}
+
+}
+cout<<ans<<el;
+}
 
 int main()
 {
-    ll n;
-    cin>>n;
-    map<string ,int>date;
-    string name;
-    for(int i=0; i<n; i++){
-cin>>name;
-if(date.count(name)==0){
-cout<<"OK"<<el;
-date[name]=1;
+    ios::sync_with_stdio(false);
+    cin.tie(NULL);
 
-}
-
-else{
-    cout<<name <<date[name]<<el;
-date[name]++;
-
-
-}
-
-
+    ll t = 1;
+    // cin >> t;
+    while (t--)
+    {
+        SOLVE();
     }
-
-
-
-
-
-
-
-
-
-
-    }
-  
+    return 0;
+}

@@ -25,39 +25,22 @@ using ll = long long;
 #define el '\n' 
 const ll MOD = 1e9 + 7;
 
+void SOLVE()
+{
+    // بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ
+    
+}
 
 int main()
 {
-    ll n;
-    cin>>n;
-    map<string ,int>date;
-    string name;
-    for(int i=0; i<n; i++){
-cin>>name;
-if(date.count(name)==0){
-cout<<"OK"<<el;
-date[name]=1;
+    ios::sync_with_stdio(false);
+    cin.tie(NULL);
 
-}
-
-else{
-    cout<<name <<date[name]<<el;
-date[name]++;
-
-
-}
-
-
+    ll t = 1;
+    // cin >> t;
+    while (t--)
+    {
+        SOLVE();
     }
-
-
-
-
-
-
-
-
-
-
-    }
-  
+    return 0;
+}

@@ -25,39 +25,40 @@ using ll = long long;
 #define el '\n' 
 const ll MOD = 1e9 + 7;
 
+void SOLVE()
+{
+    // بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ
+    ll n;
+    cin >> n;
+
+    vector<ll> a(n);
+
+    ll mx = -1e18;
+    ll mn = 1e18;
+
+    for (int i = 0; i < n; i++)
+    {
+        cin >> a[i];
+        mx = max(mx, a[i]);
+        mn = min(mn, a[i]);
+    }
+
+    cout << mx - mn + 1 << el;
+}
+
+
+
 
 int main()
 {
-    ll n;
-    cin>>n;
-    map<string ,int>date;
-    string name;
-    for(int i=0; i<n; i++){
-cin>>name;
-if(date.count(name)==0){
-cout<<"OK"<<el;
-date[name]=1;
+    ios::sync_with_stdio(false);
+    cin.tie(NULL);
 
-}
-
-else{
-    cout<<name <<date[name]<<el;
-date[name]++;
-
-
-}
-
-
+    ll t ;
+    cin >> t;
+    while (t--)
+    {
+        SOLVE();
     }
-
-
-
-
-
-
-
-
-
-
-    }
-  
+    return 0;
+}
