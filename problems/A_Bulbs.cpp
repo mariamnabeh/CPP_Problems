@@ -29,6 +29,28 @@ void SOLVE()
 {
     // بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ
     
+ll n , m;
+cin>>n>>m;
+set<int>b;
+for(int i=0; i<n; i++){
+ll x;
+cin>>x;
+for(int j=0;j<x;j++){
+
+int d;
+cin>>d;
+b.insert(d);
+
+}
+
+}
+
+if(b.size()>=m) {cout<<"YES"<<el;}
+if(b.size()<m){cout<<"NO"<<el;}
+
+
+
+
 }
 
 int main()
