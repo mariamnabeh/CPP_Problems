@@ -28,11 +28,35 @@ const ll MOD = 1e9 + 7;
 void SOLVE()
 {
     // بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ
-    string s;
-    cin>>s;
-    set<char>t(s.begin(), s.end());
-if (t.size()%2==0){cout<<"CHAT WITH HER!"<<el;}
-else cout<<"IGNORE HIM!"<<el;}
+    
+ll n , t;
+cin>>n>>t;
+vector<ll>a(n);
+for(int i=0; i<n; i++){
+cin>>a[i];
+}
+ll l=0, sum=0, ans=0;
+
+for(ll r=0; r<n; r++){
+sum+=a[r];
+while(sum>t){
+    
+sum-=a[l];
+l++;
+}
+if(sum==t){
+ans++;
+}
+
+
+
+}
+
+cout<<ans<<el;
+
+
+
+}
 
 int main()
 {

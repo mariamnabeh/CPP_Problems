@@ -25,25 +25,36 @@ using ll = long long;
 #define el '\n' 
 const ll MOD = 1e9 + 7;
 
-void SOLVE()
-{
-    // بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ
-    string s;
-    cin>>s;
-    set<char>t(s.begin(), s.end());
-if (t.size()%2==0){cout<<"CHAT WITH HER!"<<el;}
-else cout<<"IGNORE HIM!"<<el;}
 
 int main()
 {
     ios::sync_with_stdio(false);
     cin.tie(NULL);
 
-    ll t = 1;
-    // cin >> t;
-    while (t--)
-    {
-        SOLVE();
-    }
-    return 0;
+ll q;
+cin>>q;
+map<string, string>acc;
+while(q--){
+string old , New;
+cin>>old>>New;
+if (acc.count(old)){
+acc[New]=acc[old];
+acc.erase(old);
 }
+else{
+
+acc[New]=old;
+}
+
+
+
+}
+
+cout<<acc.size()<<el;
+for(auto it:acc){
+cout<<it.second<<" "<<it.first<<el;
+
+
+
+
+}}
