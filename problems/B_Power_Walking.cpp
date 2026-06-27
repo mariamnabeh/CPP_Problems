@@ -28,18 +28,29 @@ const ll MOD = 1e9 + 7;
 void SOLVE()
 {
     // بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ
-    
+ ll n;
+ cin>>n;
+ vector<ll>a(n);
+ for(int i=0; i<n; i++){
+cin>>a[i];
+
+ }
+set<ll>b;
+for(int i=0;i<n;i++){
+b.insert(a[i]);
+}
+ll s=b.size();
+for(ll k=1;k<=n; k++){
+ll ans=max(k,s);
+
+cout<<ans<<' ';
+
+}
+cout<<endl;
 
 
 
 
-
-
-
-
-
-
-    
 }
 
 int main()
@@ -48,7 +59,7 @@ int main()
     cin.tie(NULL);
 
     ll t ;
-     cin >> t;
+    cin >> t;
     while (t--)
     {
         SOLVE();

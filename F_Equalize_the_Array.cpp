@@ -24,29 +24,55 @@ using ll = long long;
 
 #define el '\n' 
 const ll MOD = 1e9 + 7;
-ll power(ll a, ll b)
-{
-    ll res = 1;
-    while (b)
-    {
-        if (b & 1) res = res * a % MOD;
-        a = a * a % MOD;
-        b >>= 1;
-    }
-    return res;
-}
+
 void SOLVE()
 {
     // بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ
-    ll l, r, k;
-cin>>l>>r>>k;
-ll ans=9/k+1;
-cout<<(power(ans, r)-power(ans,l)+MOD)%MOD<<el;
+  ll n;
+  cin>>n;
+  vector<ll>a(n);
+  for(int i=0; i<n; i++){
+cin>>a[i];
+}  
 
-
-
-
+map<ll, ll>freq;
+ll ans = 1e18;
+for(auto t:a){
+freq[t]++;
 }
+vector<ll>f;
+for(auto x: freq){
+ f.push_back(x.second);
+ 
+}
+sort(f.begin(), f.end());
+ vector<ll>pref(f.size()+1, 0);
+ for(int i=1; i<=f.size(); i++){
+pref[i]=pref[i-1]+f[i-1];
+}
+ for(int i=0; i<f.size();i++){
+    ll c=f[i];
+ ll cost=0;
+ll l=lower_bound(f.begin(), f.end(),c)-f.begin();
+
+
+
+
+
+
+
+
+
+ans=min(ans,cost);
+}
+
+cout<<ans<<el;
+}
+
+
+
+
+
 
 int main()
 {
@@ -54,7 +80,7 @@ int main()
     cin.tie(NULL);
 
     ll t ;
-     cin >> t;
+    cin >> t;
     while (t--)
     {
         SOLVE();
