@@ -28,39 +28,34 @@ const ll MOD = 1e9 + 7;
 void SOLVE()
 {
     // بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ
-  ll n, x;
-  cin>>n>>x;
-  ll target=0;
-  vector<ll>a(n);
-  for(int i=0; i<n; i++) {
-cin>>a[i];
+    
+ll n;
+cin>>n;
+vector<ll>a(n),b(n);
+for(int i=0;i<n;i++) cin>>a[i];
+for(int i=0;i<n;i++) cin>>b[i];
+for(int i=1;i<n;i++) a[i]+=a[i-1];
+for(int i=1;i<n;i++) b[i]+=b[i-1];
+bool f=1;
+ for(int i = 0; i < n; i++) if(b[i]<a[i]) f=0;
+ 
+if(f) cout<<"YES\n";
+else cout<<"NO\n";
+
+
+
+
+
+
 }
-
-ll l=0, r=n-1;
-while(l<r){
-if(a[l]+a[r]==x && x!= a[l-1]+a[r])
-
-cout<<a[l]+1<<a[r]+1<<el;
-}
-
-
-
-}
-
-
-
-
-
-
-
 
 int main()
 {
     ios::sync_with_stdio(false);
     cin.tie(NULL);
 
-    ll t = 1;
-    // cin >> t;
+    ll t ;
+     cin >> t;
     while (t--)
     {
         SOLVE();
