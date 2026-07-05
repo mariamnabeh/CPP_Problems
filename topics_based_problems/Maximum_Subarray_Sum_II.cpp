@@ -28,45 +28,34 @@ const ll MOD = 1e9 + 7;
 void SOLVE()
 {
     // بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ
-  ll n, x, count=0, sum=0,ans=0;
-  cin>>n>>x;
- // ll l=0;
-vector<ll>a(n);
-for(int i=0;i<n;i++){
-    cin>>a[i];
+    ll n, a, b, ans=-41e18;
+    cin>>n>>a>>b;
+   // ll k =(b-a)+1;
+    vector<ll> v(n);
+    for(int i=0;i<n;i++){
+cin>>v[i];
+ }
+ vector<ll>pre(n+1,0);
+ for(int i=1;i<=n;i++){
+    pre[i]=pre[i-1]+v[i-1];
+ }
+multiset<ll>s;
+for(int i=a;i<=n;i++){
+s.insert(pre[i-a]);
+
+if(i-b-1>=0){
+s.erase(s.find(pre[i-b-1]));
+
 }
- 
-//for(int r=0;r<n;r++){
-map<ll,ll>s;
-s[0]=1;
-for(int r=0;r<n;r++){
-sum+=a[r];
-ans+=s[sum-x];
-s[sum]++;}
+ans = max(ans, pre[i] - *s.begin());
+}
 
-
-
-
-
-
-
-//sum+=a[r];
-//while(sum>x){
-//sum-=a[l];
-//l++;
-
-//}
-//if(sum==x) count++;
-//}
 
 cout<<ans;
-//cout<<count;
 
 
 
 }
-
-
 
 int main()
 {

@@ -28,45 +28,33 @@ const ll MOD = 1e9 + 7;
 void SOLVE()
 {
     // بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ
-  ll n, x, count=0, sum=0,ans=0;
-  cin>>n>>x;
- // ll l=0;
-vector<ll>a(n);
-for(int i=0;i<n;i++){
-    cin>>a[i];
+  string s;
+  cin>>s;
+  ll k, count=0, dots=0,l=0, ans=0;
+  cin>>k;
+  for(int i=0;i<s.size();i++){
+if(s[i]=='.') dots++;
+while(dots>k){
+if(s[l]=='.')
+dots--;
+l++;
+
 }
- 
-//for(int r=0;r<n;r++){
-map<ll,ll>s;
-s[0]=1;
-for(int r=0;r<n;r++){
-sum+=a[r];
-ans+=s[sum-x];
-s[sum]++;}
-
-
-
-
-
-
-
-//sum+=a[r];
-//while(sum>x){
-//sum-=a[l];
 //l++;
 
-//}
-//if(sum==x) count++;
-//}
+
+
+ans=max(ans, i-l+1);
+
+  }  
+
+
+
+
 
 cout<<ans;
-//cout<<count;
-
-
 
 }
-
-
 
 int main()
 {

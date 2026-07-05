@@ -11,7 +11,7 @@
 using namespace std;
 using ll = long long;
 
-ll lcm(ll a, ll b) { return (a * b) / gcd(a, b); }
+
 const ll MOD = 1e9 + 7;
 
 void SOLVE() 
