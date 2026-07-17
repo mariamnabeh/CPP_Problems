@@ -66,26 +66,22 @@ while (b)
 return res;
 }
 void Remy() {
-ll l=1,r=1e6,mid,ans=1;
-while(l<=r){
-mid=l+(r-l)/2;
-cout<<mid<<el;
-string respons;cin>>respons;
-if(respons==">=") {
-ans=mid;
-l=mid+1;
-}
+string s;
 
+cin>>s;
+ll count=0;
+ll si=s.size();
+for(char c:s){
+if(count+c%2==0)continue;
+count+=c;
 
-else{
-
- r=mid-1;   
-}
 
 
 }
 
-cout<<"! "<<ans<<endl;
+
+cout<<count<<el;
+
 
 
 
@@ -95,10 +91,11 @@ cout<<"! "<<ans<<endl;
 }
 
 int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(NULL);
 
-
-    int t = 1;
-    //cin >> t;
+    int t ;
+    cin >> t;
     while (t--) {
         Remy();
     }

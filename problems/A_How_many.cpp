@@ -66,36 +66,14 @@ while (b)
 return res;
 }
 void Remy() {
-ll l=1,r=1e6,mid,ans=1;
-while(l<=r){
-mid=l+(r-l)/2;
-cout<<mid<<el;
-string respons;cin>>respons;
-if(respons==">=") {
-ans=mid;
-l=mid+1;
-}
-
-
-else{
-
- r=mid-1;   
-}
-
-
-}
-
-cout<<"! "<<ans<<endl;
-
-
-
-
-
-
+ll n;
+cin>>n;
+cout<<n*3<<el;
 }
 
 int main() {
-
+    ios::sync_with_stdio(false);
+    cin.tie(NULL);
 
     int t = 1;
     //cin >> t;

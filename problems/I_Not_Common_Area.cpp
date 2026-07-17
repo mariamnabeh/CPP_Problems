@@ -66,36 +66,32 @@ while (b)
 return res;
 }
 void Remy() {
-ll l=1,r=1e6,mid,ans=1;
-while(l<=r){
-mid=l+(r-l)/2;
-cout<<mid<<el;
-string respons;cin>>respons;
-if(respons==">=") {
-ans=mid;
-l=mid+1;
-}
+    ll l1, w1, l2, w2;
+    cin >> l1 >> w1 >> l2 >> w2;
 
+  
+    if (l1 < w1) swap(l1, w1);
+    if (l2 < w2) swap(l2, w2);
 
-else{
+    ll area1 = l1 * w1;
+    ll area2 = l2 * w2;
 
- r=mid-1;   
-}
+  
+    if (l2 <= l1 && w2 <= w1) {
+        cout << area1 - area2 << el;
+    }
+   
+    else if (l1 <= l2 && w1 <= w2) {
+        cout << area2 - area1 << el;
+    }
 
-
-}
-
-cout<<"! "<<ans<<endl;
-
-
-
-
-
+    else {
+        cout << -1 << el;
+    }
 
 }
-
 int main() {
-
+    
 
     int t = 1;
     //cin >> t;

@@ -66,39 +66,44 @@ while (b)
 return res;
 }
 void Remy() {
-ll l=1,r=1e6,mid,ans=1;
-while(l<=r){
-mid=l+(r-l)/2;
-cout<<mid<<el;
-string respons;cin>>respons;
-if(respons==">=") {
-ans=mid;
-l=mid+1;
+    bool f=true;
+ll n,b;
+cin>>n>>b;
+vector<ll>a(n);
+for(int i=0;i<n;i++)cin>>a[i];
+sort(a.begin(),a.end());
+if(n%2==0){
+for(int i=0;i+1<n;i+=2 ){
+    if(a[i+1]-a[i]>b) cout<<"NO"<<el;
+    return;
+}
+}
+
+    cout<<"YES"<<el;
+
+return;
+
 }
 
 
-else{
-
- r=mid-1;   
-}
-
-
-}
-
-cout<<"! "<<ans<<endl;
 
 
 
 
 
 
-}
+
+
+
+
+
 
 int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(NULL);
 
-
-    int t = 1;
-    //cin >> t;
+    int t ;
+    cin >> t;
     while (t--) {
         Remy();
     }
