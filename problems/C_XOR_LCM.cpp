@@ -66,9 +66,12 @@ while (b)
 return res;
 }
 void Remy() {
+ll c;
+cin>>c;
+ll highest = 63 - __builtin_clzll(c); 
+highest++;
+cout << (c<<highest) <<" "<<c<< el;
 
-ll n,a,b;
-cin>>n>>a>>b;
 
 
 
@@ -82,8 +85,8 @@ int main() {
     ios::sync_with_stdio(false);
     cin.tie(NULL);
 
-    int t = 1;
-    //cin >> t;
+    int t ;
+    cin >> t;
     while (t--) {
         Remy();
     }

@@ -66,22 +66,19 @@ while (b)
 return res;
 }
 void Remy() {
-    bool f=true;
-ll n,b;
-cin>>n>>b;
+
+ll n;
+cin>>n;
 vector<ll>a(n);
-for(int i=0;i<n;i++)cin>>a[i];
-sort(a.begin(),a.end());
-if(n%2==0){
-for(int i=0;i+1<n;i+=2 ){
-    if(a[i+1]-a[i]>b) cout<<"NO"<<el;
-    return;
+ll tot=0;
+for(int i=0;i<n;i++){
+    cin>>a[i];
+    tot+=a[i];
 }
-}
-
-    cout<<"YES"<<el;
-
-return;
+ll ans=1;
+vector<ll>tt(tot+1);
+for(int i=0;i<n;i++){
+for(int j=i;i<a[i];j++){
 
 }
 
@@ -89,6 +86,19 @@ return;
 
 
 
+}
+
+
+ll m;
+cin>>m;
+while(m--){
+    ll q;
+cin>>q;
+
+//cout<<ans[q]<<el;
+
+
+}
 
 
 
@@ -97,13 +107,44 @@ return;
 
 
 
+/*
+vector<ll>a(n+1,0),pre(n+1,0);
+for(int i=1;i<=n;i++) cin>>a[i];
+for(int i=1;i<=n;i++){
+    pre[i]=pre[i-1]+a[i];
+}
+
+
+
+ll m;
+cin>>m;
+while(m--){
+    ll q;
+cin>>q;
+auto tt=lower_bound(pre.begin(),pre.end(),q);
+ll ans=(tt-pre.begin());
+
+cout<<ans<<el;
+
+}
+*/
+
+
+
+
+
+
+
+
+
+}
 
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(NULL);
 
-    int t ;
-    cin >> t;
+    int t = 1;
+    //cin >> t;
     while (t--) {
         Remy();
     }

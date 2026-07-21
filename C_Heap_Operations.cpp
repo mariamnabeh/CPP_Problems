@@ -66,21 +66,16 @@ while (b)
 return res;
 }
 void Remy() {
-string s;
 
-cin>>s;
-ll count=0;
-ll si=s.size();
-for(char c:s){
-if(count+c%2==0)continue;
-count+=c;
-
-
-
+ll q;
+cin>>q;
+while(q--){
+    string s;ll x;
+    cin>>s>>x;
+    
 }
 
 
-cout<<count<<el;
 
 
 
@@ -94,8 +89,8 @@ int main() {
     ios::sync_with_stdio(false);
     cin.tie(NULL);
 
-    int t ;
-    cin >> t;
+    int t = 1;
+    //cin >> t;
     while (t--) {
         Remy();
     }

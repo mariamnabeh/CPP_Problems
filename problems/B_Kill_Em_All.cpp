@@ -66,40 +66,28 @@ while (b)
 return res;
 }
 void Remy() {
+ll q;
+cin>>q;
+while(q--){
+ll n,r;
+cin>>n>>r;
+vector<ll>a(n);
+for(int i=0;i<n;i++)cin>>a[i];
+sort(a.begin(),a.end());
+a.erase(unique(a.begin(),a.end()),a.end());
+ll shots=0;
+for(int i=a.size()-1;i>=0;i--){
+if (a[i]-shots*r>0) shots++;
+else
+break;
 
-int n;
-cin >> n;
 
-vector<long long> a(n + 1);
-
-for (int i = 1; i <= n; i++)
-    cin >> a[i];
-
-int q;
-cin >> q;
-
-while (q--) {
-
-    int op;
-    cin >> op;
-
-    if (op == 1) {
-        int i;
-        long long x;
-        cin >> i >> x;
-
-        a[i] = x;
-    }
-
-    else if (op == 2) {
-        
-    }
-
-    else {
-        // Check decreasing
-    }
 }
 
+
+cout<<shots<<el;
+
+}
 
 
 
@@ -111,8 +99,8 @@ int main() {
     ios::sync_with_stdio(false);
     cin.tie(NULL);
 
-    int t ;
-    cin >> t;
+    int t = 1;
+    //cin >> t;
     while (t--) {
         Remy();
     }
