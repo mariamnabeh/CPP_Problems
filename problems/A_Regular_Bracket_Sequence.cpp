@@ -66,31 +66,34 @@ while (b)
 return res;
 }
 void Remy() {
-
-ll q;
-cin>>q;
-while(q--){
-    string s;ll x;
-    cin>>s>>x;
+    string s;
+    cin>>s;
+    ll n=s.length();
     
+if(n%2==0&&s[0]!=')'&&s[n-1]!='('){
+    cout<<"YES"<<el;
 }
 
-
-
-
-
-
-
-
-
+else{
+    cout<<"NO"<<el;
 }
+    }
+
+
+
+
+
+
+
+
+
 
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(NULL);
 
-    int t = 1;
-    //cin >> t;
+    int t ;
+    cin >> t;
     while (t--) {
         Remy();
     }
