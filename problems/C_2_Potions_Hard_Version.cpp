@@ -67,7 +67,25 @@ return res;
 }
 void Remy() {
 
+ll n;
+cin>>n;
+priority_queue<ll> pq;
+ll count =0;
+for(int i=0;i<n;i++){
+ll x;
+cin>>x;
+count+=x;
+pq.push(-x);
+ if (count < 0){
+      count+=pq.top();
+      pq.pop();
+ }
 }
+cout<<pq.size()<<el;
+
+
+}
+
 
 int main() {
     ios::sync_with_stdio(false);

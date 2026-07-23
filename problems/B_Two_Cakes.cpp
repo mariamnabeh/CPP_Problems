@@ -14,7 +14,12 @@
 #include <deque>
 #include <stack>
 #include <set>
-
+#include <cmath>
+#include <numeric>
+#include <map>
+#include <bitset>
+#include <iterator>
+#include <iomanip>
 using namespace std;
 
 // ---------- Macros ----------
@@ -24,14 +29,15 @@ using namespace std;
 #define All(x) (x).begin()+1, (x).end()
 #define rAll(x) (x).rbegin(), (x).rend()-1
 #define Sz(x) (int)(x).size()-1
-#define el << '\n'
+#define el '\n'
 #define F first
 #define S second
 #define see_u_later return 0 // see u later :)
 
 // ---------- Constants ----------
 const long long INF = 1e18;
-const int MOD = 1e9+7;
+const double PI = acos(-1.0);
+const double EPS = 1e-9;
 
 // ---------- Type Aliases ----------
 using ll = long long;
@@ -47,56 +53,43 @@ using vpcl = vector<pair<char,long long> >;
 using vplc = vector<pair<long long,char> >;
 
 // ---------- Functions ----------
-int t,n;
-bool can(ll x, vector<ll>&a){
-
-ll total=0;
-for(int i=0;i<n;i++){
-total+=(x/a[i]);
-
-
-
+const ll MOD = 1e9 + 7;
+ll power(ll a, ll b)
+{
+ll res = 1;
+while (b)
+ {
+  if (b & 1) res = res * a % MOD;
+ a = a * a % MOD;
+ b >>= 1;
+ }
+return res;
 }
-if (total>=t){return true;}
-return total>=t;
-}
-
-
-
-
-
-
-
-
-
-
 void Remy() {
-    cin>>n>>t;
-    vector<ll>a(n);
-    for(int i=0;i<n;i++){
 
-cin>>a[i];}
-ll l=1,r=1e18;
-ll ans,mid;
+ll n,a,b;
+cin>>n>>a>>b;
+ll l=1,r=max(a,b),ans=0;
 while(l<=r){
-mid=(l+r)/2;
-if(can(mid,a)){
-ans=mid;
-r=mid-1;
+    ll mid=l+(r-l)/2;
+    ll total=(a/mid)+(b/mid);
+if(total>=n){
+    ans=mid;
+    l=mid+1;
 }
-
-
-
 else{
- l=mid+1;   
+
+r=mid-1;
+
 
 }
-
-//cout<<ans<<endl;
-
 }
 
-//cout<<ans<<endl;
+
+cout<<ans<<el;
+
+
+
 
 }
 
@@ -105,7 +98,7 @@ int main() {
     cin.tie(NULL);
 
     int t = 1;
-    cin >> t;
+    //cin >> t;
     while (t--) {
         Remy();
     }

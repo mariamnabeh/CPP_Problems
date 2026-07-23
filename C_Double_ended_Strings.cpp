@@ -1,9 +1,9 @@
 /*
-========================= 
+ ========================= 
         M.NABEH
    "The thrill of the code..."
    WA makes it more fun 
-========================= 
+ ========================= 
 */
 
 #include <iostream>
@@ -14,8 +14,12 @@
 #include <deque>
 #include <stack>
 #include <set>
-#include<unordered_map>
-
+#include <cmath>
+#include <numeric>
+#include <map>
+#include <bitset>
+#include <iterator>
+#include <iomanip>
 using namespace std;
 
 // ---------- Macros ----------
@@ -25,14 +29,15 @@ using namespace std;
 #define All(x) (x).begin()+1, (x).end()
 #define rAll(x) (x).rbegin(), (x).rend()-1
 #define Sz(x) (int)(x).size()-1
-#define el << '\n'
+#define el '\n'
 #define F first
 #define S second
 #define see_u_later return 0 // see u later :)
 
 // ---------- Constants ----------
 const long long INF = 1e18;
-const int MOD = 1e9+7;
+const double PI = acos(-1.0);
+const double EPS = 1e-9;
 
 // ---------- Type Aliases ----------
 using ll = long long;
@@ -48,6 +53,49 @@ using vpcl = vector<pair<char,long long> >;
 using vplc = vector<pair<long long,char> >;
 
 // ---------- Functions ----------
+const ll MOD = 1e9 + 7;
+ll power(ll a, ll b)
+{
+ll res = 1;
+while (b)
+ {
+  if (b & 1) res = res * a % MOD;
+ a = a * a % MOD;
+ b >>= 1;
+ }
+return res;
+}
+void Remy() {
+string s,c,ans=" ",ans2=" ";
+cin>>s>>c;
+ll count=0;
+//if(s.size()==c.size()) cout<<0<<el;
+if(s.size()>c.size()){
+for(auto x:s){
+ans+=x;
+count++;
+if(ans.size()==c.size()) break;
+
+}
+
+
+}
+if(s.size()<c.size()){
+    for(auto y:c){
+ans2+=y;
+count++;
+if(ans2.size()==s.size()) break;
+
+}
+}
+
+
+
+
+
+cout<<count<<el;
+
+}
 
 int main() {
     ios::sync_with_stdio(false);
@@ -56,51 +104,8 @@ int main() {
     int t ;
     cin >> t;
     while (t--) {
-    ll a, b, x;
-cin>>a>>b>>x;
-if (x == 1) {
-    cout << (a == b ? 0 : -1) << "\n";
-    continue;
-}
-   unordered_map<ll, ll> distA, distB; 
-ll cur=a, steps=0;
-while(true){
-distA[cur]=steps;
-if(cur==0) break;
-cur/=x;
-steps++;
-
-
-}
-
-
-ll cur=b, steps=0;
-while(true){
-  distB[cur]=steps;  
-if(cur==0) break;
-cur/=x;
-steps++;
-
-}
-
-ll ans=LLONG_MAX;
-for(auto&p:distA){
-
-
-
-
-   ll val = p.first;
-            if (distB.count(val)) {
-                ans = min(ans, distA[val] + distB[val]);
-            }
-        }
-
-        cout << ans << "\n";
+        Remy();
     }
 
-
-
+    see_u_later;
 }
-
- 
-

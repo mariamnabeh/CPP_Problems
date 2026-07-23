@@ -66,6 +66,19 @@ while (b)
 return res;
 }
 void Remy() {
+ll n,a,b;
+cin>>n>>a>>b;
+ll ans=0;
+for(int i=1;i<n;i++){
+ll m=n-i;
+ ll mun= min(a/i,b/m);
+ans=max(ans,mun);
+}
+
+
+cout<<ans<<el;
+
+
 
 }
 
