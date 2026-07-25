@@ -66,36 +66,33 @@ while (b)
 return res;
 }
 void Remy() {
-string s,c,ans=" ",ans2=" ";
-cin>>s>>c;
-ll count=0;
-//if(s.size()==c.size()) cout<<0<<el;
-if(s.size()>c.size()){
-for(auto x:s){
-ans+=x;
-count++;
-if(ans.size()==c.size()) break;
+ll n,d;
+cin>>n>>d;
+ll teams=0;
+ll c=0;
+vector<ll>a(n);
+ll maxt=1;
+for(int i=0;i<n;i++)cin>>a[i];
+sort(all(a));
+ll l=0;
+for(int r=0;r<n;r++){
+while(a[r]-a[l]>d){
+    l++;
+}
+ll current=min(n,(r-l+1)+1);
+maxt=max(maxt,current);
+}
+
+cout<<maxt<<el;
 
 }
 
 
-}
-if(s.size()<c.size()){
-    for(auto y:c){
-ans2+=y;
-count++;
-if(ans2.size()==s.size()) break;
-
-}
-}
 
 
 
 
 
-cout<<count<<el;
-
-}
 
 int main() {
     ios::sync_with_stdio(false);

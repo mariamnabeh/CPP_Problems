@@ -68,11 +68,28 @@ return res;
 void Remy() {
 ll n;
 cin>>n;
-vector<ll>a(n);
-for(int i=0;i<n;i++) cin>>a[i];
+map<ll,ll>freq;
+vll a(n);
+for(int i=0;i<n;i++) {
+
+cin>>a[i];
+ll msb=(ll)log2(a[i]);
+freq[msb]++;
+
+}
+
+ll ans=0;
+for(auto p:freq){
+ll k=p.second;
+ans+=k*(k-1)/2;
 
 
 
+
+
+}
+
+cout<<ans<<el;
 
 
 
