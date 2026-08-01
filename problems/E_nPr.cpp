@@ -67,22 +67,29 @@ return res;
 }
 void Remy() {
 
- ll n;
-cin>>n;
-vector<ll>a(n);
-for(int i=0;i<n;i++) cin>>a[i];
+ll n,r;
+cin>>n>>r;
+ll ans=1;
+while(r>0){
+ans=(ans*n)%MOD;
 
 
+n--;
+r--;
 
 
 
 }
+cout<<ans<<el;
+// npr=n!/!(n-r)
+}
+
 
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(NULL);
 
-    int t;
+    int t ;
     cin >> t;
     while (t--) {
         Remy();
