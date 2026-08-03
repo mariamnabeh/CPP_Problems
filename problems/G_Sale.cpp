@@ -69,28 +69,29 @@ void Remy() {
 ll n,m;
 cin>>n>>m;
 vll a(n);for(int i=0;i<n;i++) cin>>a[i];
-ll sum = 0;
-
-
-for (int i = 0; i < m; i++)
-    sum += a[i];
-
-ll mn = sum;
-int idx = 0;
-
-for (int i = m; i < n; i++) {
-    sum -= a[i - m];
-    sum += a[i];
-
-    if (sum < mn) {
-        mn = sum;
-        idx = i - m + 1;   
+ll ans=0;
+sort(all(a));
+for(int i=0;i<m;i++){
+if(a[i]<0){
+    ans+=-a[i];}
+    else{
+break;
+    }
 }
-}
-cout << idx + 1<<el ; 
+cout<<ans<<el;
 
+//ll sum=0, ans=0;
+//for(int i=0;i<m;i++){
+//sum+=a[i];
+//}
+//ll mx=sum;
+//for(int i=m;i<n;i++){
 
-
+//sum-=a[i-m];
+//sum+=a[i];
+//mx=max(sum,mx);
+//}
+//cout<<mx<<el;
 }
 
 int main() {

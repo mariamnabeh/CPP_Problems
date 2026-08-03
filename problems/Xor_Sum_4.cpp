@@ -65,31 +65,39 @@ while (b)
  }
 return res;
 }
+ll XOR(ll n){
+ll ans=0;
+for(int i=n;;i--){
+    ans^=i;
+    if(i%4==3){
+      break;
+
+}
+
+}
+
+return ans;
+
+}
 void Remy() {
-ll n,r;
-cin>>n>>r;
-ll rr=r;
-ll ans=1;
-while(rr>0){
-ans=(ans*n)%MOD;
-n--;
-rr--;
+
+ll n;
+cin>>n;
+vll a(n);
+for(int i=0;i<n;i++) cin>>a[i];
+ll ans=0; 
+for (int bit = 0; bit < 60; bit++) {
+ll zero=0, one=0;
+for(int i=0;i<n;i++){
+    if((a[i]>>bit)&1) 
+one++;
+    else
+        zero++;
 }
 
-ll fact = 1;
-while (r > 0) {
-    fact = fact * r % MOD;
-    r--;
+    ans = (ans + zero * one % MOD * power(2, bit) % MOD) % MOD;
 }
-ans = ans * power(fact, MOD - 2) % MOD;
-
-cout << ans<<el;
-
-
-
-
-
-
+cout<<ans<<el;
 
 }
 
@@ -97,8 +105,8 @@ int main() {
     ios::sync_with_stdio(false);
     cin.tie(NULL);
 
-    int t ;
-    cin >> t;
+    int t=1 ;
+    //cin >> t;
     while (t--) {
         Remy();
     }
