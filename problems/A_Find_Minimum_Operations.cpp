@@ -67,19 +67,26 @@ return res;
 }
 void Remy() {
 
+ll n,k;
+cin>>n>>k;
+ if(k==1) {cout<<n<<el; return;}
+ ll ans=0;
+ while(n>0){
+ans+=(n%k);
+n/=k;
 
 
 
-
-    
+ }
+ cout<<ans<<el;
 }
 
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(NULL);
 
-    int t = 1;
-    //cin >> t;
+    int t ;
+    cin >> t;
     while (t--) {
         Remy();
     }
