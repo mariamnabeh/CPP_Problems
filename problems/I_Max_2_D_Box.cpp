@@ -66,31 +66,53 @@ while (b)
 return res;
 }
 void Remy() {
-ll n;
-vector<vector<ll>>m(n);
-for(int i=0;i<n;i++){
-    for(int j=0;j<n;j++){
-        cin>>m[i][j];
+   int n, m, x, y;
+    cin >> n >> m >> x >> y;
+
+vector<vector<ll>>pre(n+1,vector<ll>(m+1,0));
+for(int i=1;i<=n;i++){
+    for(int j=1;j<=m;j++){
+      ll a;
+      cin>>a;
+      pre[i][j]=a
+      + pre[i-1][j]+pre[i][j-1]+- pre[i-1][j-1];
+
     }
 }
 
+    ll ans = -INF;
 
+    for (int i = x; i <= n; i++) {
+        for (int j = y; j <= m; j++) {
 
+            ll sum = pre[i][j]
+                   - pre[i-x][j]
+                   - pre[i][j-y]
+                   + pre[i-x][j-y];
 
+            ans = max(ans, sum);
+        }
+    }
 
-
-
-
-
-
-
-
-
-
-
-
-
+    cout << ans << el;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 int main() {
     ios::sync_with_stdio(false);
