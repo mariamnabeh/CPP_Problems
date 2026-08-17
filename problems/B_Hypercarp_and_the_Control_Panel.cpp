@@ -56,37 +56,55 @@ using vplc = vector<pair<long long,char> >;
 const ll MOD = 1e9 + 7;
 ll power(ll a, ll b)
 {
-ll res = 1;
-while (b)
- {
-  if (b & 1) res = res * a % MOD;
- a = a * a % MOD;
- b >>= 1;
- }
-return res;
+    ll res = 1;
+    while (b)
+    {
+        if (b & 1) res = res * a % MOD;
+        a = a * a % MOD;
+        b >>= 1;
+    }
+    return res;
 }
+
 void Remy() {
-ll c;
-cin>>c;
-// a=k*c, b=a*c , (k*c)+c= c(k+1)
-// limit for c is 1e7
-// 7log2(10)=23, we will use num bigger than it 
-// why? if we make xor with two nm and one of them bigger then the frist one the xor will = (+)
-ll k=1ll<<25;ll a=k*c, b=(k+1)*c;
-cout<<a<<" "<<b<<el;
+    int n;
+    cin >> n;
 
+    vector<int> a(n);
+    for (int &x : a) cin >> x;
 
+    int ans = 1;
+    for (int i = 1; i < n; i++)
+        ans += (a[i] != a[i - 1]);
 
+    int best = ans;
 
+    for (int i = 0; i + 3 < n; i++) {
+        if (a[i] == a[i + 1] && a[i + 2] == a[i + 3]) {
+            best = ans + 2;
+            break;
+        }
+    }
+
+    if (best == ans) {
+        for (int i = 0; i + 1 < n; i++) {
+            if (a[i] == a[i + 1] && ans > 1) {
+                best = ans + 1;
+                break;
+            }
+        }
+    }
+
+    cout << best << el;
 }
 
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(NULL);
 
-    int t ;
-    cin >> t;
-    while (t--) {
+    int TestsNumT;
+    cin >> TestsNumT;
+    while (TestsNumT--) {
         Remy();
     }
 

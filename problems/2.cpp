@@ -14,7 +14,12 @@
 #include <deque>
 #include <stack>
 #include <set>
-
+#include <cmath>
+#include <numeric>
+#include <map>
+#include <bitset>
+#include <iterator>
+#include <iomanip>
 using namespace std;
 
 // ---------- Macros ----------
@@ -31,7 +36,8 @@ using namespace std;
 
 // ---------- Constants ----------
 const long long INF = 1e18;
-const int MOD = 1e9+7;
+const double PI = acos(-1.0);
+const double EPS = 1e-9;
 
 // ---------- Type Aliases ----------
 using ll = long long;
@@ -47,62 +53,31 @@ using vpcl = vector<pair<char,long long> >;
 using vplc = vector<pair<long long,char> >;
 
 // ---------- Functions ----------
-ll n,k;
-bool can(ll c, vector<ll>&have, vector<ll>&need)
+const ll MOD = 1e9 + 7;
+ll power(ll a, ll b)
 {
-ll magic=0;
-for(int i=0;i<n;i++){
-    if(have[i]>=need[i]*c) continue;
-    magic+=(1ll*need[i]*c-have[i]);
-if(magic>k) return false;
+ll res = 1;
+while (b)
+ {
+  if (b & 1) res = res * a % MOD;
+ a = a * a % MOD;
+ b >>= 1;
+ }
+return res;
 }
-   return k>=magic; 
-}
-
-
 void Remy() {
-
-
-cin>>n>>k;
-vector<ll>have(n),need(n);
-
-for(int i=0;i<n;i++) cin>>need[i];
-for(int i=0;i<n;i++) cin>>have[i];
-
-ll l=0,r=2e9, ans=0,mid;
-while(l<=r){
-mid=l+(r-l)/2;
-if(can(mid,have, need)){
-
-
-    ans=mid;
-    l=mid+1;
+string q;
+while(getline(cin, q)){
+    if(q=="Is it rated?"){
+        cout << "NO" << el;
+    }
 }
-
-
-
-else{
-
-r=mid-1;
-
-
-
-}
-
-
-
-
-}
-
-cout<<ans<<el;
-
 
 
 }
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(NULL);
+    
 
     int t = 1;
     //cin >> t;

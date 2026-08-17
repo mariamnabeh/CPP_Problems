@@ -56,36 +56,54 @@ using vplc = vector<pair<long long,char> >;
 const ll MOD = 1e9 + 7;
 ll power(ll a, ll b)
 {
-ll res = 1;
-while (b)
- {
-  if (b & 1) res = res * a % MOD;
- a = a * a % MOD;
- b >>= 1;
- }
-return res;
+    ll res = 1;
+    while (b)
+    {
+        if (b & 1) res = res * a % MOD;
+        a = a * a % MOD;
+        b >>= 1;
+    }
+    return res;
 }
+
+bool can(ll mid, const vll& a, ll k){
+    ll total = 0;
+    for (ll x : a) {
+        total += min(x, mid);
+    }
+    return total >= mid * k;
+} 
+
 void Remy() {
-ll c;
-cin>>c;
-// a=k*c, b=a*c , (k*c)+c= c(k+1)
-// limit for c is 1e7
-// 7log2(10)=23, we will use num bigger than it 
-// why? if we make xor with two nm and one of them bigger then the frist one the xor will = (+)
-ll k=1ll<<25;ll a=k*c, b=(k+1)*c;
-cout<<a<<" "<<b<<el;
+    ll k, n;
+    cin >> k >> n;
+    vll a(n);
+    ll sum = 0;
+    for(int i = 0; i < n; i++) {
+        cin >> a[i];
+        sum += a[i];
+    }
+    
+    ll l = 0, r = sum / k, ans = 0;
+    while(l <= r){
+        ll mid = l + (r - l) / 2;
+        if(can(mid, a, k)){ 
+            ans = mid;
+            l = mid + 1;
+        } else {
+            r = mid - 1;
+        }
+    }
 
-
-
-
+    cout << ans << el;
 }
 
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(NULL);
 
-    int t ;
-    cin >> t;
+    int t = 1;
+    //cin >> t;
     while (t--) {
         Remy();
     }

@@ -66,14 +66,26 @@ while (b)
 return res;
 }
 void Remy() {
-ll c;
-cin>>c;
-// a=k*c, b=a*c , (k*c)+c= c(k+1)
-// limit for c is 1e7
-// 7log2(10)=23, we will use num bigger than it 
-// why? if we make xor with two nm and one of them bigger then the frist one the xor will = (+)
-ll k=1ll<<25;ll a=k*c, b=(k+1)*c;
-cout<<a<<" "<<b<<el;
+ll n;
+vector<vector<ll>>m(n);
+for(int i=0;i<n;i++){
+    for(int j=0;j<n;j++){
+        cin>>m[i][j];
+    }
+}
+
+vec
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -84,8 +96,8 @@ int main() {
     ios::sync_with_stdio(false);
     cin.tie(NULL);
 
-    int t ;
-    cin >> t;
+    int t = 1;
+    //cin >> t;
     while (t--) {
         Remy();
     }
