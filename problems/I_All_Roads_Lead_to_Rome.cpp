@@ -41,7 +41,8 @@ const double EPS = 1e-9;
 
 // ---------- Type Aliases ----------
 using ll = long long;
-using ld = long double;;
+using ld = long double;
+using pii = pair<int,int>;
 using pll = pair<long long,long long>;
 using vi = vector<int>;
 using vll = vector<long long>;
@@ -65,27 +66,24 @@ while (b)
 return res;
 }
 void Remy() {
-ll n,l,k;
+ll n, l,k;
 cin>>n>>l>>k;
 ll mx=0;
 for(int i=0;i<n;i++){
-    ll x,y;
+    ll x, y;
     cin>>x>>y;
-    ll cur=x*x+y*y;
-    mx=max(mx,cur);
+    ll d=x*x+y*y;
+    mx=max(mx, d);
+
 }
-for(int j=0;j<=31;j++){
+ll ans=0;
+while(l*l<mx){
+l=max(l*2,l+k);
+ans++;
+}
 
 
-    for(int i=0;i<=j;i++){
-ll mul=1ll<<(j-i);
-ll res=(l+i*k)*mul;
-if(res*res>=mx){
-    cout<<j<<el;
-    return;
-}
-    }
-}
+cout<<ans<<el;
 
 
 
@@ -95,7 +93,7 @@ int main() {
     ios::sync_with_stdio(false);
     cin.tie(NULL);
 
-    int t ;
+    int t = 1;
     cin >> t;
     while (t--) {
         Remy();
