@@ -68,10 +68,24 @@ return res;
 void Remy() {
 ll n;
 cin>>n;
-vll a(n);
-for(int i=0;i<n;i++){
-    cin>>a[i];
+ll ans=1;
+for(int i=2;i*i<=n;i++){
+    ll cnt=0;
+    while(n%i==0){
+        n/=i;
+        cnt++;
+    }
+    ans*=(cnt+1);
 }
+    if(n>1){
+        ans*=2;
+    }
+
+cout<<ans<<el;
+
+
+
+
 
 
 
@@ -83,7 +97,7 @@ int main() {
     cin.tie(NULL);
 
     int t = 1;
-    //cin >> t;
+    cin >> t;
     while (t--) {
         Remy();
     }
