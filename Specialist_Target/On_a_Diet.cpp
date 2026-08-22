@@ -70,28 +70,28 @@ ll n, m,k;
 cin>>n>>m>>k;
 vll a(n+1,0);
 for(int i=1;i<=n;i++) cin>>a[i];
+
 vll pre(n+1);
 for(int i=1;i<=n;i++){
+    ll sum=0;
+    if(i<m){
+    sum=pre[i-1];
+    }
+    else{
+        sum=pre[i-1]-pre[i-m];
+    }
+if(sum+a[i]<=k){
+    cout<<"Yes"<<el;
     pre[i]=pre[i-1]+a[i];
 }
-for(int i=1;i<=k;i++){
-    if(pre[i]<=m){
-        cout<<"YES"<<el;
-    }
-    else{
-        cout<<"NO"<<el;
-    }
+else{
+    cout<<"No"<<el;
+    pre[i]=pre[i-1]; 
 }
 
-for(int i=k;i<=n;i++){
-    if(a[i]>=m){
-        cout<<"YES"<<el;
-    }
-    else{
-        cout<<"NO"<<el;
-    }
-}
 
+
+}
 
 }
 
