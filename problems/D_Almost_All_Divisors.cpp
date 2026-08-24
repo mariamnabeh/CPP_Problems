@@ -66,32 +66,44 @@ while (b)
 return res;
 }
 void Remy() {
-    int n;
-    cin >> n;
-
-    vector<int> a(n);
-
-    for(int i=0; i<n; i++)
-        cin >> a[i];
-
-    vector<int> cnt(1000001);
-
-    for(int i=1; i<=1000000; i++){
-        for(int j=i; j<=1000000; j+=i){
-            cnt[j]++;
+ll n;
+cin>>n;
+vll a(n);
+for(int i=0;i<n;i++) cin>>a[i];
+sort(all(a));
+ll x=1;
+ll mn=a[0];
+ll mx=a[n-1];
+x=mn*mx;
+vll div;
+for(int i=1;i*i<=x;i++){
+    if(x%i==0){
+div.push_back(i);
+        if(i!=x/i){
+            div.push_back(x/i);
         }
     }
-
-    for(int x : a){
-        cout << cnt[x] << el;
-    }
 }
+sort(all(div));
+div.erase(div.begin());
+div.pop_back();
+
+if(a==div){
+    cout<<x<<el;
+}
+else{
+    cout<<-1<<el;
+}
+
+
+}
+
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(NULL);
 
     int t = 1;
-   // cin >> t;
+    cin >> t;
     while (t--) {
         Remy();
     }
