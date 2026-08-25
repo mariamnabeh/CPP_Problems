@@ -40,6 +40,20 @@ ll fpower(ll a, ll b)
     }
     return res;
 }
+gcd_itretive(ll a,ll b){
+    a=abs(a); b=abs(b);
+    while(b!=0){
+        ll r=a%b;
+        a=b;
+        b=r;
+
+    }
+    return a;
+}
+
+// O(1);
+
+
 
 void Remy() {
 
