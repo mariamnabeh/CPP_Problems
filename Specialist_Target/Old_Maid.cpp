@@ -57,13 +57,24 @@ ll fpower(ll a, ll b)
 }
 
 void Remy() {
+ll n;
+cin>>n;
+vll a(n);
+for(int i=0;i<n;i++) cin>>a[i];
+map<ll, ll>frq;
+for(int i=0;i<n;i++){
+    frq[a[i]]++;
+}
+ll ans=0;
+for(auto p:frq){
+if(p.second%2!=0){
+   ans+= p.first;
+}
+}
+
+cout<<ans;
 
 
-
-
-
-
-    
 }
 
 int main() {
