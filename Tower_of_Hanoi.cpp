@@ -3,6 +3,7 @@ using namespace std;
 using ll = long long;
 using ld = long double;
 using ull = unsigned long long;
+using it = list<ll>::iterator;
 using pii = pair<int,int>;
 using vi = vector<int>;
 using vll = vector<long long>;
@@ -14,21 +15,21 @@ const long long INF = 1e18;
 const double PI = acos(-1.0);
 const double EPS = 1e-9;
 #define el '\n'
-
-
-// Bitwise Operations
-#define bits(x) (log2(x) + 1)
-#define SETBIT(x, i) ((x) | (1ULL << (i)))
-#define GETBIT(x, i) (((x) >> (i)) & 1ULL)
-#define FLIPBIT(x, i) ((x) ^ (1ULL << (i)))
-#define CLEARBIT(x, i) ((x) & ~(1ULL << (i)))
-#define LOWBIT(x) ((x) & -(x))
-#define POPCOUNT(x) __builtin_popcountll(x)
-#define CLZ(x) __builtin_clzll(x) // Error if x = 0
-#define CTZ(x) __builtin_ctzll(x) // Error if x = 0
  
+ 
+// Bitwise Operations
+#define GETBIT(x, i) (((x) >> (i)) & 1ULL)   // Get bit
+#define SETBIT(x, i) ((x) | (1ULL << (i)))   // Set bit
+#define FLIPBIT(x, i) ((x) ^ (1ULL << (i)))  // Flip bit
+#define CLEARBIT(x, i) ((x) & ~(1ULL << (i))) // Clear bit
 
 
+long long mul(long long x, long long y, const long long &mod) 
+{ return ((x % mod) * (y % mod)) % mod; }
+long long add(long long x, long long y, const long long &mod)
+{ return (((x % mod) + (y % mod)) % mod + mod) % mod; }
+long long sub(long long x, long long y, const long long &mod)
+{ return (((x % mod) - (y % mod)) % mod + mod) % mod;} 
 
 
 
