@@ -1,4 +1,4 @@
-
+#include <bits/stdc++.h>
 using namespace std;
 using ll = long long;
 using ld = long double;
@@ -36,6 +36,32 @@ long long sub(long long x, long long y, const long long &mod)
 //وَأَنَّ سَعْيَهُ سَوْفَ يُرَى
 void Remy() {
     
+ll q, k;
+cin>>q;
+while(q--){
+    cin>>k;
+ ll l=1,count=9, s=1;
+ while(k>l*count){
+    k-=l*count;
+       l++;
+    count*=10;
+    s*=10;
+
+ }
+ll num=s+(k-1)/l;
+ll idx=(k-1)%l;
+string st=to_string(num);
+cout<<st[idx]<<el;
+//ll ans=(num/(ll)pow(10,l-1-idx))%10;
+//cout<<ans<<el;
+
+
+
+}
+
+
+
+
 }
 
 

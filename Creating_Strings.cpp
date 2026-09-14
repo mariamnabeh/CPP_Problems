@@ -1,4 +1,4 @@
-
+#include <bits/stdc++.h>
 using namespace std;
 using ll = long long;
 using ld = long double;
@@ -35,7 +35,27 @@ long long sub(long long x, long long y, const long long &mod)
 
 //وَأَنَّ سَعْيَهُ سَوْفَ يُرَى
 void Remy() {
-    
+ string s;
+ cin>>s;
+ vector<string>res;
+ sort(all(s));
+ do{
+  res.push_back(s);}
+ while(next_permutation(s.begin(), s.end()));
+
+
+    cout<<res.size()<<el;
+    for(auto c:res){
+        cout<<c<<el;
+    }
+
+
+
+
+
+
+
+
 }
 
 
