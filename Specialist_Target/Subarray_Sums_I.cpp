@@ -1,4 +1,4 @@
-
+#include <bits/stdc++.h>
 using namespace std;
 using ll = long long;
 using ld = long double;
@@ -35,7 +35,33 @@ long long sub(long long x, long long y, const long long &mod)
 
 //وَأَنَّ سَعْيَهُ سَوْفَ يُرَى
 void Remy() {
+  ll n,x;
+    cin>>n>>x;
+    vll a(n);
+    ll sum=0;
+    for(int i=0;i<n;i++) {cin>>a[i];}
+    ll count=0,l=0;
+    for(int i=0;i<n;i++){
+sum+=a[i];
+while(sum>x){
+    sum-=a[l];
+    l++;
+}
+if(sum==x){
+    count++;
+}
+
+}
+
     
+
+cout<<count<<el;
+
+
+
+  
+  
+
 }
 
 
